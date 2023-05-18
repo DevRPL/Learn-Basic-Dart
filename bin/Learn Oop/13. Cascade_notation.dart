@@ -22,7 +22,7 @@ void main() {
 
     // nuullable Factory_Constructor
 
-    user? user2 = createUser()
+    User? user2 = createUser()
           ?..username = 'Jamil'
           ..name = 'Muhamad Jamil Firdaus'
           ..email = 'jamil@example.com';
