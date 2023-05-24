@@ -1,9 +1,10 @@
 import '../data/Repository.dart';
 
 void main() {
-  dynamic repository =  Repository('Products');
+  var repository =  Repository('Products');
 
   repository.id('123');
   repository.name('Laptop');
   repository.qty(1000);
+  repository.location('Bandung');
 }
