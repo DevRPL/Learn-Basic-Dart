@@ -24,6 +24,16 @@ void main() {
     print('Error : ${exception.message}');
   } on Exception catch(exception) {
     print('Error : ${exception.toString()}');
+  } finally {
+    print('Program Selesai');
+  }
+
+  try {
+    Validation.validate('jamil', 'password');
+  } catch(exception) {
+    print('Error : ${exception.toString()}');
+  } finally {
+    print('Finnaly');
   }
   print('Selesai');
 }
