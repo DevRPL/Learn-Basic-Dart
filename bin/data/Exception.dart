@@ -10,10 +10,20 @@ class Validation {
       throw ValidationException('Username is Blank');
     } else if (password == '') {
       throw ValidationException('Password is Blank');
+    } else if(username != 'Dev Rpl' || password != 'Dev Rpl') {
+      throw Exception('Login Failed');
     }
   }
 }
 
 void main() {
-  Validation.validate('', '');
+
+  try {
+    Validation.validate('jamil', 'password');
+  } on ValidationException catch(exception) {
+    print('Error : ${exception.message}');
+  } on Exception catch(exception) {
+    print('Error : ${exception.toString()}');
+  }
+  print('Selesai');
 }
