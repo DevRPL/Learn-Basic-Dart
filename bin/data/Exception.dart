@@ -20,16 +20,18 @@ void main() {
 
   try {
     Validation.validate('jamil', 'password');
-  } on ValidationException catch(exception) {
+  } on ValidationException catch(exception, stackTrace) {
     print('Error : ${exception.message}');
-  } on Exception catch(exception) {
+    print('StackTrace : ${stackTrace.toString()}');
+  } on Exception catch(exception, stackTrace) {
     print('Error : ${exception.toString()}');
+    print('StackTrace : ${stackTrace.toString()}');
   } finally {
     print('Program Selesai');
   }
 
   try {
-    Validation.validate('jamil', 'password');
+    Validation.validate('Dev Rpls', 'Dev Rpls');
   } catch(exception) {
     print('Error : ${exception.toString()}');
   } finally {
